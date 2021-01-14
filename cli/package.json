@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "autobahn": "^20.2.1",
-    "yargs": "^15.1.0"
+    "yargs": "^15.4.1"
   }
 }
