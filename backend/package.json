@@ -10,7 +10,9 @@
     "start:mainnet": "env NEAR_RPC_URL=https://rpc.mainnet.near.org WAMP_NEAR_NETWORK_NAME=mainnet NEAR_GENESIS_RECORDS_URL=https://raw.githubusercontent.com/nearprotocol/nearcore/master/neard/res/mainnet_genesis.json npm run start",
     "start:with-indexer": "env NEAR_IS_LEGACY_SYNC_BACKEND_ENABLED=false NEAR_IS_INDEXER_BACKEND_ENABLED=true npm run start",
     "start:testnet-with-indexer": "source ./config/env-indexer-testnet && npm run start:with-indexer",
-    "start:mainnet-with-indexer": "source ./config/env-indexer-mainnet && npm run start:with-indexer"
+    "start:mainnet-with-indexer": "source ./config/env-indexer-mainnet && npm run start:with-indexer",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,8 @@
     "sequelize": "^5.21.1",
     "sqlite3": "^4.1.0",
     "stream-json": "^1.7.1",
-    "ws": "^7.2.0"
-  }
+    "ws": "^7.2.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
